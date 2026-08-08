@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Review"
+  short_description: "Run an evidence-based end-to-end product audit"
+  default_prompt: "Use $product-review to audit this product and return one prioritized improvement backlog."

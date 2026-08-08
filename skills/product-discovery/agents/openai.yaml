@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Discovery"
+  short_description: "Choose opportunities and solution directions"
+  default_prompt: "Use $product-discovery to decide which opportunity and solution direction deserves more commitment."

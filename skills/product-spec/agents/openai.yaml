@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Spec"
+  short_description: "Turn approved scope into a behavioral spec"
+  default_prompt: "Use $product-spec to turn this approved scope into an implementation-ready behavioral specification."

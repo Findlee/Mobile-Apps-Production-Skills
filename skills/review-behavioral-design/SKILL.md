@@ -7,6 +7,18 @@ description: Conduct an evidence-aware behavioral-design review of an existing a
 
 Review the existing experience without modifying it unless the user separately asks for implementation. Produce one coherent diagnosis and improvement plan rather than a stack of disconnected specialist reports.
 
+## Orchestration safety
+
+When invoked directly for a behavioral-design audit, this skill is the active orchestrator. When invoked by `product-review` or `review-product-experience`, it operates as a bounded suite pass:
+
+- use only the behavioral question, journeys, evidence, and constraints supplied by the parent;
+- return scoped findings, evidence, confidence, ethical risks, limitations, and handoff recommendations;
+- do not invoke a parent reviewer or claim global product priority;
+- do not widen into product strategy, release scope, or a complete UX audit;
+- load companion skills lazily and only when their result could change the bounded answer.
+
+Only one skill owns final synthesis and the user-facing backlog at a time.
+
 ## Resolve the companion skills
 
 Use these package skills as specialist passes:

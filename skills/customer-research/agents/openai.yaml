@@ -1,0 +1,4 @@
+interface:
+  display_name: "Customer Research"
+  short_description: "Plan and synthesize decision-oriented research"
+  default_prompt: "Use $customer-research to plan or synthesize customer research for this product decision."

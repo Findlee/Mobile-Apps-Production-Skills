@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Experiment"
+  short_description: "Design credible tests for risky assumptions"
+  default_prompt: "Use $product-experiment to identify the riskiest assumption and design the smallest credible test."

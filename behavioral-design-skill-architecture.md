@@ -36,7 +36,7 @@
 9. оценивает transfer и scale только при переносе или расширении эффекта;
 10. объединяет результаты в один backlog, не дублируя поверхностные симптомы.
 
-Пакет дополняет UI/UX-набор репозитория. `review-product-experience` отвечает за сквозное качество продукта, а `review-behavioral-design` — за причины поведения, уместность вмешательств, этику и доказательность.
+Пакет дополняет UI/UX- и Product Management-наборы репозитория. `review-product-experience` отвечает за сквозное качество UX/UI, `review-behavioral-design` — за причины поведения, уместность вмешательств, этику и доказательность, а `product-review` — за итоговый product/business audit, если запрос охватывает стратегию, customer evidence, scope и measurement. При вызове из родительского ревью behavioral suite работает как bounded pass и не создаёт конкурирующий backlog.
 
 ## Ключевые модели
 

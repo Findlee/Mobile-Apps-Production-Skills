@@ -1,6 +1,6 @@
 ---
 name: plan-feature-change
-description: Plan a safe, outcome-oriented software feature or behavior change from user intent through delivery slicing, architecture impact, implementation sequence, rollout, and validation. Use when planning a new feature, cross-cutting behavior change, offline or synchronization flow, SDK migration, substantial integration, or implementation roadmap before editing code. Do not use for trivial localized edits or pure product discovery without implementation planning.
+description: Plan a safe, outcome-oriented software feature or behavior change from approved product intent through delivery slicing, architecture impact, implementation sequence, rollout, rollback, and validation. Use when planning a new feature, cross-cutting behavior change, offline or synchronization flow, SDK migration, substantial integration, or implementation roadmap before editing code. Use product-spec first when actors, journeys, states, business rules, failure behavior, scope, or acceptance semantics remain unresolved. Do not use for trivial localized edits or pure product discovery.
 ---
 
 # Plan a Feature Change
@@ -75,6 +75,8 @@ Do not present a file list as a plan. Do not hide uncertainty. Do not turn a sma
 
 If available, use a more specific skill when the task needs depth:
 
+- approved product behavior and acceptance contract: `product-spec`;
+- release inclusion/exclusion and coherent product slice: `mvp-scope`;
 - product discovery or story mapping: `map-product-scope`;
 - system architecture comparison: `analyze-architecture-tradeoffs`;
 - source-code module design: `design-module-boundaries`;
@@ -88,3 +90,5 @@ If available, use a more specific skill when the task needs depth:
 - signed artifacts, store rollout, and mobile recovery: `prepare-mobile-release`.
 
 Keep this skill responsible for the integrated delivery plan.
+
+When invoked after `product-spec`, preserve its product invariants, explicit scope, state/rule semantics, analytics requirements, and unresolved blockers. Own technical sequencing, repository impact, migrations, rollout, rollback, and verification; return product-semantic contradictions to the parent instead of silently deciding them.

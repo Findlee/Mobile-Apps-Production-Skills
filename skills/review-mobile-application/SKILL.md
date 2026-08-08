@@ -7,6 +7,18 @@ description: Perform a comprehensive, evidence-based, read-only review of an exi
 
 Act as the audit coordinator. Inspect the actual repository, select only the relevant specialist lenses, and return one deduplicated improvement report. Remain read-only unless the user explicitly expands the task to implementation.
 
+## Orchestration safety
+
+When invoked directly for a mobile-engineering audit, this skill is the active orchestrator. When invoked by `product-review`, it operates as a bounded suite pass:
+
+- inspect only the engineering question, journeys, repository surfaces, and release risks supplied by the parent;
+- return scoped findings, evidence, confidence, limitations, and handoff recommendations;
+- do not invoke `product-review` or claim global product priority;
+- return unresolved product semantics to the parent instead of silently deciding strategy, scope, or behavior;
+- load engineering specialists lazily and only when they can materially change the bounded answer.
+
+Only one skill owns final synthesis and the user-facing backlog at a time.
+
 ## Establish the audit boundary
 
 1. Confirm the repository root, requested depth, target platforms, and whether the goal is general health, release readiness, modernization, or a particular risk.

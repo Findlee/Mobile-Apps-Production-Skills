@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Strategy"
+  short_description: "Define focused product strategy and trade-offs"
+  default_prompt: "Use $product-strategy to clarify the target customer, value proposition, outcomes, and strategic choices."

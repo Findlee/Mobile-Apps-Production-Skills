@@ -1,6 +1,6 @@
 ---
 name: define-product-metrics-experiments
-description: Define decision-oriented product metrics and plan, audit, or interpret trustworthy online controlled experiments. Use when asked to turn goals into signals and metrics, choose an overall evaluation criterion and guardrails, assess experiment readiness, write an A/B test design, diagnose sample-ratio or instrumentation problems, or interpret results without overstating causality. Do not use to fabricate data, guarantee business impact, infer causality from observational correlation, or replace a qualified statistician for high-risk decisions.
+description: Define decision-oriented metrics and plan, audit, or interpret a narrow trustworthy online controlled experiment. Use to choose an OEC and guardrails for a specific test, assess experiment readiness, write an A/B design, diagnose sample-ratio or instrumentation problems, or interpret supplied results without overstating causality. Use product-metrics for a complete product measurement system spanning value exchange, North Star, activation, retention, funnels, instrumentation, and post-launch decisions; use product-experiment when the main question is which product assumption or learning method to choose.
 ---
 
 # Define Product Metrics Experiments
@@ -60,6 +60,9 @@ Record hypothesis, design, implementation, analysis code/version, results, decis
 
 ## Boundaries with related skills
 
+- Use `product-metrics` when the request concerns the complete product measurement system, including value exchange, North Star/outcome model, activation, retention, funnels, instrumentation, and post-launch decisions. When called by `product-metrics`, answer only the bounded controlled-experiment question and return the result to that parent.
+- Use `product-experiment` when the main question is which product assumption to test or which learning method is smallest and credible; this skill owns the narrow metric/statistical contract once a controlled experiment is selected.
+- Use `design-behavior-experiments` when the causal hypothesis is specifically about a behavioral mechanism or intervention; avoid producing a second competing experiment plan.
 - Use `run-lean-usability-tests` for why and how people struggle; experiments estimate comparative effects at scale.
 - Use `design-trustworthy-consent-experiences` for data and consent choices, pricing disclosure, subscriptions, cancellation, and other deceptive-choice risks.
 - This skill can prepare an analysis plan and reason over supplied results; it must not invent measurements or statistical certainty.

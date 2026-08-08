@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Manager"
+  short_description: "Route product work to the right workflow"
+  default_prompt: "Use $product-manager to identify the highest-risk unknown and decide what product work should happen next."

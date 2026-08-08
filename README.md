@@ -1,16 +1,54 @@
 # AI Skills
 
-Reusable AI-agent skills for designing, building, reviewing, and validating digital products and software.
+Reusable AI skills for Claude Code, Codex, and other agentic coding environments.
 
 The skills are organized around repeatable tasks rather than individual books. Their core instructions are tool- and framework-neutral, so the underlying workflows can be adapted for Codex, Claude Code, and other agents that support skill-style context packages.
 
+## Product Management skills
+
+### Start with product work or a full product audit
+
+- [`product-manager`](skills/product-manager/SKILL.md) — default Product Management entry point that identifies the highest-risk unknown and routes only to the workflow needed next.
+- [`product-review`](skills/product-review/SKILL.md) — audits product and business performance across strategy, customer evidence, opportunity quality, scope, behavior, measurement, and learning, then returns one Product Improvement Backlog.
+
+Use `product-manager` for ordinary product decisions, planning, ambiguous feature requests, and post-launch learning. Use `product-review` for a full product/business audit. Product review may request bounded UX/UI, behavioral-design, or mobile-engineering suite passes, but remains the sole active orchestrator and owns final priority.
+
+### Strategy and discovery
+
+- [`product-strategy`](skills/product-strategy/SKILL.md) — defines target customers, value proposition, outcomes, strategic trade-offs, principles, and non-goals.
+- [`product-discovery`](skills/product-discovery/SKILL.md) — decides which opportunity and solution direction deserves greater commitment.
+- [`customer-research`](skills/customer-research/SKILL.md) — plans and synthesizes decision-oriented qualitative customer evidence without fabricating participants or findings.
+
+### Validation and delivery definition
+
+- [`product-experiment`](skills/product-experiment/SKILL.md) — exposes risky assumptions and selects the smallest credible learning method before unnecessary investment.
+- [`mvp-scope`](skills/mvp-scope/SKILL.md) — owns the smallest coherent release boundary, quality floor, non-goals, and change-control rules.
+- [`product-spec`](skills/product-spec/SKILL.md) — converts approved scope into an implementation-ready behavioral contract without inventing product decisions.
+
+### Measurement
+
+- [`product-metrics`](skills/product-metrics/SKILL.md) — connects customer value, outcomes, activation, retention, instrumentation, experiments, and post-launch decisions into one measurement system.
+
+The suite-wide orchestration contract, ownership boundaries, Evidence Model, and system evals live in [`product-management/`](product-management/ORCHESTRATION.md).
+
+## Choosing a review entry point
+
+| Primary question | Entry point |
+|---|---|
+| What is limiting the product or business overall, and what should happen next? | [`product-review`](skills/product-review/SKILL.md) |
+| What is wrong with the UX/UI experience and critical journeys? | [`review-product-experience`](skills/review-product-experience/SKILL.md) |
+| Why is behavior occurring, and is the intervention effective and ethical? | [`review-behavioral-design`](skills/review-behavioral-design/SKILL.md) |
+| What is wrong with Flutter/React Native engineering health or release readiness? | [`review-mobile-application`](skills/review-mobile-application/SKILL.md) |
+
+Only one reviewer owns orchestration, final synthesis, and priority at a time. A parent may request a bounded pass from another review suite; that child returns scoped findings and does not produce a competing final backlog.
+
 ## UI/UX skills
 
-### Start with an end-to-end review
+### Start with an experience review
 
 - [`review-product-experience`](skills/review-product-experience/SKILL.md) — inspect a whole application, route evidence through the relevant specialist skills, deduplicate findings, and return one prioritized remediation roadmap.
 
-Use this orchestrator when the request concerns an entire product, repository, release candidate, or multiple journeys. Use one of the specialist skills below for a narrow question.
+Use this orchestrator when the primary request concerns UX/UI quality across an application, release candidate, or multiple journeys. Use `product-review` when the question also spans product strategy, customer evidence, business viability, scope, and product-level measurement. Use one of the specialist skills below for a narrow experience question.
 
 ### Product and interaction foundations
 
@@ -33,7 +71,7 @@ Use this orchestrator when the request concerns an entire product, repository, r
 ### Trust, measurement, systems, and AI
 
 - [`design-trustworthy-consent-experiences`](skills/design-trustworthy-consent-experiences/SKILL.md) — privacy, consent, subscriptions, deletion, and deceptive-pattern prevention.
-- [`define-product-metrics-experiments`](skills/define-product-metrics-experiments/SKILL.md) — decision metrics, trustworthy controlled experiments, guardrails, validity, and interpretation.
+- [`define-product-metrics-experiments`](skills/define-product-metrics-experiments/SKILL.md) — narrow controlled-experiment scorecards, readiness, trust checks, validity, and interpretation.
 - [`build-scale-design-systems`](skills/build-scale-design-systems/SKILL.md) — system charter, inventory, pilots, tokens, component APIs, governance, adoption, and value measurement.
 - [`design-human-ai-interactions`](skills/design-human-ai-interactions/SKILL.md) — capability framing, uncertainty, provenance, human control, recovery, risk, and AI launch gates.
 
@@ -43,7 +81,7 @@ Use this orchestrator when the request concerns an entire product, repository, r
 
 - [`review-behavioral-design`](skills/review-behavioral-design/SKILL.md) — audit how a product shapes behavior, route evidence through the relevant behavioral specialists, and return one prioritized improvement backlog.
 
-Use this orchestrator when the request concerns activation, follow-through, retention, repeated behavior, consequential choices, incentives, behavioral ethics, or whether an intervention will work beyond a pilot. It complements `review-product-experience`: the product orchestrator covers the whole UX/UI system, while the behavioral orchestrator goes deeper on why behavior occurs and how an intervention should be validated.
+Use this orchestrator when the request concerns activation, follow-through, retention, repeated behavior, consequential choices, incentives, behavioral ethics, or whether an intervention will work beyond a pilot. It complements `review-product-experience`: the experience orchestrator covers the UX/UI system, while the behavioral orchestrator goes deeper on why behavior occurs and how an intervention should be validated.
 
 ### Diagnose and design behavior
 
@@ -66,7 +104,7 @@ Use this orchestrator when the request concerns activation, follow-through, rete
 
 - [`review-mobile-application`](skills/review-mobile-application/SKILL.md) — audit an existing Flutter or React Native application, route repository evidence through the relevant engineering specialists, and return one prioritized remediation roadmap.
 
-Use this orchestrator for application health, technical debt, modernization, or release-readiness reviews. It is read-only by default and complements `review-product-experience`: the product orchestrator evaluates the experience, while the mobile orchestrator evaluates implementation, architecture, data, testing, performance evidence, native boundaries, and delivery controls.
+Use this orchestrator for application health, technical debt, modernization, or release-readiness reviews. It is read-only by default and complements `review-product-experience`: the experience orchestrator evaluates UX/UI quality, while the mobile orchestrator evaluates implementation, architecture, data, testing, performance evidence, native boundaries, and delivery controls.
 
 ### Plan and shape software changes
 
@@ -88,17 +126,17 @@ Use this orchestrator for application health, technical debt, modernization, or 
 
 ## Structure
 
-Each skill contains:
+Every skill contains `SKILL.md` and Codex-facing metadata. Skills add references, assets, sources, or evals only when needed:
 
 ```text
 skill-name/
 ├── SKILL.md
 ├── agents/
 │   └── openai.yaml
-├── references/
-│   └── focused guidance loaded when needed
-└── assets/                 # optional
-    └── reusable output templates
+├── references/             # optional focused guidance
+├── assets/                 # optional reusable templates
+├── SOURCES.md              # optional source map
+└── EVALS.md                # optional evaluation scenarios
 ```
 
 `SKILL.md` defines when the skill should activate, its workflow, safety boundaries, and default output. Detailed knowledge is split into focused reference files to avoid loading an entire knowledge base for every request.
@@ -120,4 +158,5 @@ The architecture, book analysis, source boundaries, and design rationale are doc
 
 - [`ui-books-skill-architecture.md`](ui-books-skill-architecture.md) for the UI/UX suite;
 - [`behavioral-design-skill-architecture.md`](behavioral-design-skill-architecture.md) for the behavioral-design suite;
-- [`mobile-development-skill-architecture.md`](mobile-development-skill-architecture.md) for the software and mobile-development suite.
+- [`mobile-development-skill-architecture.md`](mobile-development-skill-architecture.md) for the software and mobile-development suite;
+- [`product-management-skill-architecture.md`](product-management-skill-architecture.md) for the Product Management suite, with runtime behavior in [`ORCHESTRATION.md`](product-management/ORCHESTRATION.md), ownership in [`BOUNDARIES.md`](product-management/BOUNDARIES.md), and epistemic rules in [`EVIDENCE-MODEL.md`](product-management/EVIDENCE-MODEL.md).

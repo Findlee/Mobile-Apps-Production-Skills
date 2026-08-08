@@ -21,6 +21,8 @@ Create a routing record before deep review:
 
 ## Routing rules
 
+- If the primary request is a full Product Management audit spanning strategy, customer evidence, opportunity, scope, business viability, and measurement, transfer the top-level task to `product-review` instead of treating it as a specialist pass.
+- If `product-review` invoked this suite, never call it back. Stay within the bounded UX/UI question and return findings to the parent.
 - Select a skill because a material decision or risk exists, not to claim full coverage.
 - Apply the core three to representative critical journeys, then deepen only where screening finds evidence.
 - Respect the declared review depth. For rapid and standard reviews, defer lower-consequence lenses rather than partially loading every specialist.

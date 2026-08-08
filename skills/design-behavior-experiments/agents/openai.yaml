@@ -1,4 +1,4 @@
 interface:
   display_name: "Design Behavior Experiments"
-  short_description: "Measure whether an intervention changes behavior"
-  default_prompt: "Use $design-behavior-experiments to create a rigorous measurement and experiment plan for this intervention."
+  short_description: "Test behavioral mechanisms and interventions"
+  default_prompt: "Use $design-behavior-experiments to design a rigorous causal test of this behavioral mechanism or intervention."

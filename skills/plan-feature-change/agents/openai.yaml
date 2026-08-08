@@ -1,4 +1,4 @@
 interface:
   display_name: "Plan Feature Change"
-  short_description: "Plan safe, outcome-oriented software changes"
-  default_prompt: "Use $plan-feature-change to plan this feature from user outcome through implementation and validation."
+  short_description: "Plan safe delivery of approved product behavior"
+  default_prompt: "Use $plan-feature-change to turn this approved product behavior into a safe implementation, rollout, and validation plan."

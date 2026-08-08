@@ -1,6 +1,6 @@
 ---
 name: map-product-scope
-description: Turn product ideas, requirements, feature lists, or flat backlogs into shared understanding through outcome framing, user story mapping, scenario flows, discovery questions, MVP and experiment slicing, release planning, and acceptance conversations. Use when clarifying what to build, mapping a user journey, finding missing scenarios, defining an MVP, reducing scope, or turning a backlog into coherent product increments.
+description: Turn product ideas, requirements, feature lists, or flat backlogs into shared understanding through outcome framing, user story mapping, scenario flows, discovery questions, candidate MVP/experiment slices, and acceptance conversations. Use when mapping a user journey, exposing missing scenarios, restructuring a backlog, or proposing coherent slice options. Use mvp-scope when the primary task is the final release-boundary decision—what is now, next, later, or out—and product-spec when approved behavior must be defined precisely.
 ---
 
 # Map Product Scope
@@ -58,6 +58,15 @@ Read [slicing-heuristics.md](references/slicing-heuristics.md) when defining an 
 ## Prepare the next conversation
 
 For near-term stories, capture examples of success, boundaries, and failure. Do not attempt to perfect every card. List the people who must discuss product value, usability, feasibility, and verification.
+
+## Boundaries with Product Management skills
+
+- Use `product-discovery` when the opportunity or solution direction is still the primary unknown; a story map must not make unsupported discovery decisions.
+- Use this skill to create the shared journey map, expose missing scenarios, and propose candidate learning/release slices.
+- Use `mvp-scope` to make the final release-boundary decision: now, next, later, out-of-scope, and quality floor.
+- Use `product-spec` after the scope is approved to define exact behavior, states, rules, failure/recovery, and acceptance.
+
+When invoked by a Product Management parent, return the map and slice candidates without claiming final product priority.
 
 ## Produce the result
 

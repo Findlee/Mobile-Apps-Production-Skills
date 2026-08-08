@@ -1,0 +1,4 @@
+interface:
+  display_name: "MVP Scope"
+  short_description: "Define the smallest coherent release scope"
+  default_prompt: "Use $mvp-scope to define the smallest coherent release that preserves value and learning."

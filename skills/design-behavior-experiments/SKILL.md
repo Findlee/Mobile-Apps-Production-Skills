@@ -1,6 +1,6 @@
 ---
 name: design-behavior-experiments
-description: Design a rigorous measurement or experiment plan to determine whether a product, communication, choice architecture, habit mechanic, or behavioral intervention causes a meaningful change. Use for A/B tests, randomized rollouts, field experiments, behavioral metrics, causal questions, null results, guardrails, or evaluation when randomization is unavailable. Distinguishes user outcomes, target behaviors, mechanisms, business metrics, and harm metrics.
+description: Design a rigorous behavioral experiment to determine whether a communication, choice architecture, habit mechanic, incentive, or behavioral intervention causes meaningful change through a specified mechanism. Use for behavioral A/B tests, randomized rollouts, field experiments, mechanism metrics, null results, harm guardrails, or behavioral evaluation when randomization is unavailable. Use product-experiment when the main task is choosing which product assumption or learning method to test, and product-metrics or define-product-metrics-experiments for the broader product/statistical measurement contract.
 ---
 
 # Design Behavior Experiments
@@ -89,6 +89,14 @@ Do not turn a null result into proof of no effect or a statistically significant
 Preserve institutional memory: hypothesis, owner, variants, screenshots or specifications, population, dates, quality checks, results, decision, and rationale. Do not retain only wins.
 
 ## Deliver the experiment brief
+
+When used with the Product Management suite:
+
+- `product-experiment` owns the product assumption, learning decision, and selection of this behavioral experiment as the smallest credible method;
+- `product-metrics` or `define-product-metrics-experiments` owns the broader product scorecard and controlled-experiment statistical contract when additional depth is required;
+- this skill owns the behavioral causal chain, mechanism measures, intervention comparison, behavioral guardrails, and interpretation within the bounded question.
+
+Return findings to the active parent and do not create a competing product priority or global measurement system.
 
 Use the user's language and include:
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Metrics"
+  short_description: "Design trustworthy product measurement systems"
+  default_prompt: "Use $product-metrics to define a trustworthy measurement system for this product outcome."

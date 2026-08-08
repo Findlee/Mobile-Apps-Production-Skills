@@ -1,4 +1,4 @@
 interface:
-  display_name: "Product Metrics & Experiments"
-  short_description: "Define metrics and trustworthy product experiments"
-  default_prompt: "Use $define-product-metrics-experiments to define decision metrics and a trustworthy experiment for this product question."
+  display_name: "Controlled Experiment Metrics"
+  short_description: "Design trustworthy controlled-experiment scorecards"
+  default_prompt: "Use $define-product-metrics-experiments to define the scorecard, readiness checks, and interpretation plan for this controlled experiment."

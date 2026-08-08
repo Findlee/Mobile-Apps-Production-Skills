@@ -1,6 +1,6 @@
 ---
 name: review-product-experience
-description: Orchestrate an evidence-based end-to-end review of a digital application or product by routing work through the relevant UX, UI, interaction, accessibility, mobile, localization, privacy, behavioral-design, experimentation, design-system, and human-AI skills, then deduplicating findings into one prioritized improvement plan. Use when asked to review an entire app, repository, prototype, release candidate, or product experience; identify what should be improved; run a cross-disciplinary UX audit; assess readiness; or produce a remediation roadmap. Do not use for a narrow single-component question when one specialist skill is sufficient, to fabricate user or production evidence, or to modify the product unless implementation is explicitly requested.
+description: Orchestrate an evidence-based end-to-end UX/UI and product-experience review by routing work through relevant interaction, accessibility, mobile-experience, localization, privacy, behavioral-design, experimentation, design-system, and human-AI skills, then deduplicating findings into one prioritized experience-improvement plan. Use to review an app, prototype, release candidate, or multiple user journeys; run a cross-disciplinary UX audit; assess experience readiness; or produce a UX remediation roadmap. Do not use as the primary owner for product strategy, portfolio, roadmap, business viability, or a full Product Management audit; use product-review for those broader decisions.
 ---
 
 # Review Product Experience
@@ -19,6 +19,18 @@ Act as the review lead. Establish evidence, select the necessary specialist lens
 - Prioritize task failure, harm, loss of agency, inaccessible outcomes, and data or financial consequences ahead of visual polish.
 - Do not claim legal compliance, accessibility certification, causal impact, or user validation without the required evidence.
 - Review is read-only by default. Do not edit code, data, production configuration, analytics, or external systems unless the user explicitly asks for implementation.
+
+## Orchestration safety
+
+When invoked directly for an experience audit, this skill is the active orchestrator. When invoked by `product-review`, it operates as a bounded suite pass:
+
+- use only the journey and UX/UI question supplied by the parent;
+- return candidate findings, evidence, confidence, limitations, and handoff recommendations;
+- do not invoke `product-review` or produce a competing global backlog;
+- do not widen into product strategy, portfolio, business viability, or release-scope ownership;
+- keep nested behavioral passes bounded and return their findings through this suite to the active parent.
+
+Only one skill owns final synthesis and priority at a time.
 
 ## Workflow
 
@@ -114,7 +126,8 @@ Do not finish until:
 ## Boundaries
 
 - Use a specialist skill directly when the request concerns one narrow domain or component.
-- Use this orchestrator for whole-product, release, cross-journey, or cross-disciplinary reviews.
+- Use this orchestrator for whole-experience, release UX/UI, cross-journey, or cross-disciplinary experience reviews.
+- Use `product-review` when the primary question spans product strategy, customer evidence, opportunity choice, business viability, scope, measurement, and learning—not only experience quality.
 - A review can recommend usability studies or experiments; it cannot manufacture their results.
 - A review can identify likely accessibility, privacy, security, legal, or statistical risk; formal assurance belongs to qualified owners and appropriate testing.
 

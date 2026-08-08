@@ -1,19 +1,21 @@
-Product Management Skills v1.0 - Static Integrity Audit
+Product Management Skills v1.1 - Static Integrity Audit
 
 customer-research: OK | skill_lines=1241 | local_evals=36
+design-ai-product-system: OK | skill_lines=132 | local_evals=5
 mvp-scope: OK | skill_lines=1182 | local_evals=60
+operate-product-team: OK | skill_lines=141 | local_evals=5
 product-discovery: OK | skill_lines=928 | local_evals=28
 product-experiment: OK | skill_lines=1445 | local_evals=50
-product-manager: OK | skill_lines=658 | local_evals=12
+product-manager: OK | skill_lines=682 | local_evals=13
 product-metrics: OK | skill_lines=1412 | local_evals=90
-product-review: OK | skill_lines=1300 | local_evals=130
+product-review: OK | skill_lines=1326 | local_evals=130
 product-spec: OK | skill_lines=1386 | local_evals=90
 product-strategy: OK | skill_lines=697 | local_evals=18
 
-Local evals total: 514
-System evals total: 41
-Combined eval scenarios: 555
-Skill count: 9
+Local evals total: 525
+System evals total: 43
+Combined eval scenarios: 568
+Skill count: 11
 
 RESULT: PASS
 No static integrity errors found.

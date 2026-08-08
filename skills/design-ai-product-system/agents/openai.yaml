@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design AI Product System"
+  short_description: "Specify useful, evaluable AI product behavior"
+  default_prompt: "Use $design-ai-product-system to design this AI feature as a complete product, evaluation, and operational system."

@@ -1,8 +1,8 @@
-# Cross-Skill Audit - v1.0
+# Cross-Skill Audit - v1.1
 
 ## Scope
 
-Audit of all nine skills as one runtime system, focused on routing, ownership, duplication, recursion, context cost, handoffs, and implementation safety.
+Audit of the original nine Product Management skills plus the AI-system and product-team specialists as one runtime system, focused on routing, ownership, duplication, recursion, context cost, handoffs, and implementation safety.
 
 ## Findings and changes
 
@@ -30,7 +30,7 @@ Fix:
 
 ### P1 - Context explosion from loading all skills - FIXED
 
-The full library is intentionally detailed. Loading all nine skills plus references at once would waste context and increase instruction conflict.
+The full library is intentionally detailed. Loading all eleven skills plus references at once would waste context and increase instruction conflict.
 
 Fix:
 
@@ -134,12 +134,14 @@ Some overlap is desirable because skills must remain usable directly:
 - `product-discovery` can reason from supplied customer evidence even though primary qualitative research design lives in `customer-research`;
 - `product-spec` defines analytics semantics required for implementation while `product-metrics` owns the broader measurement system;
 - `product-review` contains lightweight audit lenses so it can diagnose before deciding whether a specialist deep-dive is warranted.
+- `design-ai-product-system` contains interaction guardrails required for a complete system contract while `design-human-ai-interactions` owns deeper interaction-level transparency, control, and recovery.
+- `operate-product-team` can identify unresolved product decisions while existing Product Management specialists retain ownership of strategy, discovery, research, experimentation, scope, specification, and metrics.
 
 These overlaps are guardrails, not competing ownership.
 
 ## Release recommendation
 
-The system is coherent enough to treat this package as `v1.0` of the Product Management Skills architecture.
+The system is coherent enough to treat this package as `v1.1` of the Product Management Skills architecture.
 
 ## Repository integration audit
 

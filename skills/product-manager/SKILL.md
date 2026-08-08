@@ -1,6 +1,6 @@
 ---
 name: product-manager
-description: Orchestrate product work before and after implementation. Use for product ideas, feature requests, new products, product decisions, roadmap questions, ambiguous requirements, product planning, implementation requests with product uncertainty, and post-launch decisions. Identify the current product state, expose the highest-risk unknown, choose the smallest appropriate workflow, and route to product-strategy, product-discovery, customer-research, product-experiment, mvp-scope, product-spec, product-metrics, or product-review. Do not use as project-management ceremony or to block trivial low-risk work.
+description: Orchestrate product work before and after implementation. Use for product ideas, feature requests, new products, product decisions, roadmap questions, ambiguous requirements, product planning, AI-product decisions, product-team operating questions, implementation requests with product uncertainty, and post-launch decisions. Identify the current product state, expose the highest-risk unknown, choose the smallest appropriate workflow, and route to product-strategy, product-discovery, customer-research, product-experiment, mvp-scope, product-spec, product-metrics, design-ai-product-system, operate-product-team, or product-review. Do not use as project-management ceremony or to block trivial low-risk work.
 ---
 
 # Product Manager
@@ -291,6 +291,30 @@ Use when the main uncertainty concerns:
 - experiment metrics;
 - post-launch measurement;
 - whether an outcome was actually achieved.
+
+### Route to `design-ai-product-system`
+
+Use when the main uncertainty concerns an AI product's complete operating contract rather than only interface behavior:
+
+- whether AI adds distinct value over deterministic or human alternatives;
+- human/AI roles, autonomy, and consequential actions;
+- RAG, routing, agents, tools, memory, cache, or provider architecture;
+- task/component evaluation, datasets, rubrics, slices, and release gates;
+- data and feedback use, guardrails, observability, incidents, cost, latency, versioning, or rollback.
+
+Use `design-human-ai-interactions` instead for a narrow interaction question about uncertainty, provenance, user control, or recovery. Keep the AI-system call bounded when `product-manager` remains active.
+
+### Route to `operate-product-team`
+
+Use when the main uncertainty concerns how the product team works rather than which product decision it should make:
+
+- delivery/feature/product-team operating pattern;
+- team charter, outcome ownership, competence, and decision rights;
+- discovery and delivery cadence;
+- customer/data access and stakeholder collaboration;
+- commitments, dependencies, coaching, or a bounded transformation pilot.
+
+Do not treat ordinary feature planning as an operating-model problem. This skill may diagnose and recommend, but organization or personnel changes still require explicit authority.
 
 ### Route to `product-review`
 

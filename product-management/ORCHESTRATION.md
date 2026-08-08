@@ -198,6 +198,12 @@ Owns implementation-ready product behavior for the approved scope: journeys, sta
 ### `product-metrics`
 Owns metric definitions, instrumentation semantics, activation/retention/funnels, scorecards, controlled-experiment measurement/statistics, and post-launch quantitative interpretation.
 
+### `design-ai-product-system`
+Owns the integrated AI capability, human-autonomy contract, architecture, evaluation, data/feedback, guardrails, observability, incidents, cost/latency, versioning, and staged-release design. It does not own the parent product's global priority.
+
+### `operate-product-team`
+Owns evidence-based assessment and design of team charter, competence/decision rights, goal/idea/step/task cadence, stakeholder collaboration, commitments, and bounded operating-model pilots. It does not authorize organization or personnel changes.
+
 ### Existing library specialists and suite reviewers
 
 - `review-product-experience` owns a bounded UX/UI experience-quality review; it does not own product strategy, portfolio, business viability, or the final cross-product backlog when called by `product-review`.
@@ -207,6 +213,7 @@ Owns metric definitions, instrumentation semantics, activation/retention/funnels
 - `map-product-scope` supplies story maps, journey slices, and backlog structure. `mvp-scope` owns the final release boundary.
 - `design-behavior-experiments` owns behavioral causal-test depth. `product-experiment` owns which product assumption to test and whether a behavioral experiment is the smallest credible method.
 - `plan-feature-change` owns the engineering delivery plan after product behavior and scope are sufficiently resolved by `product-spec` and `mvp-scope`.
+- `design-human-ai-interactions` owns interaction-level AI transparency, uncertainty, control, and recovery. `design-ai-product-system` owns the broader AI product/evaluation/operations system.
 
 ## 8. Key overlap resolutions
 

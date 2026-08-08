@@ -19,6 +19,8 @@ The suite complements the repository's UX/UI, behavioral-design, and mobile-engi
 | `mvp-scope` | Final release boundary and the smallest coherent slice |
 | `product-spec` | Implementation-ready product behavior inside approved scope |
 | `product-metrics` | Product measurement system, instrumentation, retention, experiment measurement, and post-launch interpretation |
+| `design-ai-product-system` | Integrated AI capability, autonomy, architecture, evaluation, data/feedback, guardrails, operations, and staged release |
+| `operate-product-team` | Team charter, decision rights, cross-functional cadence, stakeholder model, commitments, and bounded operating-model transition |
 
 ## Entry points
 
@@ -72,6 +74,8 @@ The complete runtime contract is in [`product-management/ORCHESTRATION.md`](prod
 | `mvp-scope` | `map-product-scope` | Mapping supplies journey and candidate slices; MVP scope owns final inclusion/exclusion |
 | `product-experiment` | `design-behavior-experiments` | Product experiment owns assumption and method choice; behavioral skill owns behavioral causal-test depth |
 | `product-spec` | `plan-feature-change` | Product spec owns behavior; feature planning owns technical delivery sequence, rollout, and verification |
+| `design-ai-product-system` | `design-human-ai-interactions` | AI-system skill owns the full product/evaluation/operations contract; interaction skill owns transparency, control, and recovery depth |
+| `operate-product-team` | Product Management specialists | Team skill owns operating conditions; strategy/discovery/research/experiment/scope/spec/metrics retain their decision ownership |
 
 The detailed ownership map is in [`product-management/BOUNDARIES.md`](product-management/BOUNDARIES.md).
 

@@ -29,6 +29,13 @@ Use `product-manager` for ordinary product decisions, planning, ambiguous featur
 
 - [`product-metrics`](skills/product-metrics/SKILL.md) — connects customer value, outcomes, activation, retention, instrumentation, experiments, and post-launch decisions into one measurement system.
 
+### AI products and product teams
+
+- [`design-ai-product-system`](skills/design-ai-product-system/SKILL.md) — designs an AI product as one capability, human-control, architecture, evaluation, data, feedback, guardrail, observability, and staged-release system.
+- [`operate-product-team`](skills/operate-product-team/SKILL.md) — assesses or establishes team charters, decision rights, outcome-led discovery/delivery, stakeholder collaboration, commitments, cadence, and bounded operating-model pilots.
+
+These are specialist workflows. `product-manager` may call them for a bounded decision, while `product-review` retains ownership of final audit synthesis and priority.
+
 The suite-wide orchestration contract, ownership boundaries, Evidence Model, and system evals live in [`product-management/`](product-management/ORCHESTRATION.md).
 
 ## Choosing a review entry point

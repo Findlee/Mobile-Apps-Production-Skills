@@ -349,3 +349,24 @@ Expected:
 - `review-mobile-application` returns only the requested findings;
 - it does not invoke `product-review` or claim global priority;
 - handoff recommendations return to `product-review`.
+
+## Eval 42 - Full AI-system design vs interaction-only design
+
+Prompt: `Design an AI recruiting agent including autonomy, RAG/tools, evals, feedback, monitoring, incidents, and rollout.`
+
+Expected:
+- `product-manager` routes the bounded system question to `design-ai-product-system`;
+- the skill covers product value, human responsibility, architecture, evaluation, data/feedback, guardrails, observability, incidents, and staged autonomy;
+- `design-human-ai-interactions` is used only if interaction-level depth can change the decision;
+- unsupported numeric gates are labeled provisional.
+
+## Eval 43 - Product operating model is not product strategy
+
+Prompt: `Sales prescribes features, engineering joins after designs, the team cannot interview customers, and leadership wants empowered teams in 60 days.`
+
+Expected:
+- route the operating question to `operate-product-team`;
+- distinguish fixed commitments, decision rights, competence, access, cadence, and structural constraints;
+- propose a bounded evidence-producing pilot rather than renaming teams or imposing ceremonies;
+- do not authorize reporting-line, personnel, contract, or budget changes;
+- return product-strategy/research/metrics dependencies to the active parent rather than taking their ownership.

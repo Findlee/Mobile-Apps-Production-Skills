@@ -1,0 +1,4 @@
+interface:
+  display_name: "Operate Product Team"
+  short_description: "Run an outcome-led cross-functional team"
+  default_prompt: "Use $operate-product-team to assess this team's operating model and establish an outcome-led discovery and delivery cadence."

@@ -1,6 +1,6 @@
 ---
 name: product-review
-description: Run an evidence-based end-to-end product and business audit of an existing product, feature, release, roadmap, product plan, product spec, analytics setup, or AI product. Use for "full product review", "what should we improve", "why is this underperforming", portfolio or roadmap diagnosis, and cross-domain reviews spanning strategy, customer evidence, opportunity quality, scope, behavior, measurement, and learning. Orchestrate Product Management specialists and request bounded UX/UI, behavioral-design, or mobile-engineering suite passes when needed, then return one prioritized Product Improvement Backlog. For a narrow UX/UI experience audit use review-product-experience directly; for a narrow behavioral or mobile-engineering audit use the matching domain reviewer.
+description: Run an evidence-based end-to-end product and business audit of an existing product, feature, release, roadmap, product plan, product spec, analytics setup, AI product, or product operating model. Use for "full product review", "what should we improve", "why is this underperforming", portfolio or roadmap diagnosis, and cross-domain reviews spanning strategy, customer evidence, opportunity quality, scope, behavior, measurement, AI-system readiness, team operation, and learning. Orchestrate Product Management specialists and request bounded UX/UI, behavioral-design, or mobile-engineering suite passes when needed, then return one prioritized Product Improvement Backlog. For a narrow UX/UI experience audit use review-product-experience directly; for a narrow behavioral or mobile-engineering audit use the matching domain reviewer.
 ---
 
 # Product Review
@@ -42,6 +42,7 @@ Rules:
 - specialist skills return evidence, findings, confidence/limitations, and handoff recommendations; `product-review` owns deduplication, causal synthesis, priority, and the final backlog;
 - if a specialist recommends another skill, decide at the review layer whether that second call would materially change the audit;
 - when requesting a pass from `review-product-experience`, `review-behavioral-design`, or `review-mobile-application`, explicitly mark it as a bounded suite pass; the child reviewer must not claim global priority or produce a competing final backlog;
+- when requesting `design-ai-product-system` or `operate-product-team`, give a bounded system/team question; these specialists do not own global product priority;
 - do not let a specialist silently widen the review scope;
 - review is read-only by default: do not edit code, product behavior, analytics, or configuration unless the user separately asks for implementation.
 
@@ -601,6 +602,8 @@ Check separately:
 
 Do not use every NIST risk category mechanically. Select risks relevant to the use case and potential impact.
 
+When architecture, autonomy, evaluation, data/feedback, guardrails, observability, cost/latency, incident response, or model/provider change could alter readiness, request a bounded pass from `design-ai-product-system`. Use `design-human-ai-interactions` or an experience-suite pass when the primary question is interaction-level transparency, control, or recovery.
+
 ### Dimension N - Build-trap and learning system
 
 Check:
@@ -620,6 +623,8 @@ Red flags:
 with no meaningful:
 
 `expectation -> measure -> learn -> decision`
+
+When team charter, decision rights, customer access, stakeholder commitments, cross-functional competence, or discovery/delivery cadence is a material causal constraint, request a bounded pass from `operate-product-team`. Keep its organizational recommendations distinct from product defects and within the user's authority.
 
 ## Step 5 - Use specialist skills selectively
 
@@ -692,6 +697,27 @@ Invoke/deep-dive when:
 - activation/retention definitions are poor;
 - experiment metrics are invalid or gameable;
 - a post-launch decision requires causal or cohort interpretation.
+
+### `design-ai-product-system`
+
+Invoke/deep-dive when:
+
+- AI value versus a simpler approach is unresolved;
+- autonomy or consequential actions may be unsafe;
+- architecture adds RAG, agents, tools, routing, memory, cache, or multiple providers;
+- evaluation, data, feedback, guardrails, observability, incidents, cost/latency, versioning, or rollback could change readiness.
+
+Ask for a bounded AI-system assessment and candidate findings. Do not let it produce a parallel product backlog.
+
+### `operate-product-team`
+
+Invoke/deep-dive when:
+
+- output-driven operating behavior is a causal constraint, not merely a symptom;
+- decision rights, customer/data access, cross-functional competence, stakeholder commitments, or cadence materially limit outcomes;
+- the requested decision concerns a team charter, operating model, or bounded transformation pilot.
+
+Ask for an evidence-based operating assessment. Do not infer individual performance or authorize organizational change through the review.
 
 ### Existing domain review suites
 

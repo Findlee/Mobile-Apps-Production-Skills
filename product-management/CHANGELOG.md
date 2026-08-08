@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.1
+
+Added:
+
+- `design-ai-product-system` for the integrated AI product, autonomy, architecture, evaluation, feedback, guardrail, observability, incident, and staged-release contract;
+- `operate-product-team` for evidence-based operating-model assessment, team charters, decision rights, cadence, stakeholder commitments, and bounded transition pilots;
+- bounded routing from `product-manager` and `product-review` to both specialists;
+- system evals for full AI-system design and product operating-model diagnosis.
+
+Resolved:
+
+- full AI-system ownership versus the interaction-level `design-human-ai-interactions` skill;
+- product operating conditions versus product strategy, discovery, and review ownership;
+- duplicate imports of existing strategy, experiment, behavior-design, specification, and review capabilities.
+
 ## v1.0
 
 First system-level release after individual skill reviews.

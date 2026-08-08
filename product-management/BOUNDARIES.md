@@ -17,6 +17,8 @@ Use this map to choose one owner for each product question and avoid duplicate w
 | Is an A/B result trustworthy and decision-relevant? | `product-metrics` | `product-experiment` | `product-discovery` |
 | What are the biggest problems in the product overall? | `product-review` | all specialists as bounded calls | individual specialists |
 | Which workflow should run next? | `product-manager` | `product-review` for audit intent | specialist skills |
+| What complete product/evaluation/operations contract should an AI capability use? | `design-ai-product-system` | `design-human-ai-interactions`, `product-experiment`, `product-metrics` | `product-review` owns global audit priority |
+| How should the cross-functional product team operate and transition? | `operate-product-team` | Product Management specialists for their owned decisions | Does not perform personnel or organization changes without authority |
 
 ## Boundaries with existing library skills
 
@@ -30,6 +32,8 @@ Use this map to choose one owner for each product question and avoid duplicate w
 | How should the journey/backlog be mapped? | `map-product-scope` | `mvp-scope` | Mapping supports the decision; `mvp-scope` owns inclusion/exclusion |
 | Which assumption should be tested with which learning method? | `product-experiment` | `design-behavior-experiments`, `define-product-metrics-experiments` | Supporting skills own behavioral/statistical depth, not product priority |
 | How must approved product behavior work? | `product-spec` | `plan-feature-change` | Spec owns behavior; plan owns technical delivery sequence |
+| How should an AI product be designed beyond its interface? | `design-ai-product-system` | `design-human-ai-interactions` | AI-system skill owns architecture/evals/operations; interaction skill owns transparency/control/recovery depth |
+| What operating model limits product outcomes? | `operate-product-team` | `product-strategy`, `customer-research`, `product-metrics` | Team skill owns charter/rights/cadence/pilot; product specialists own product decisions |
 
 ## Direction of normal flow
 

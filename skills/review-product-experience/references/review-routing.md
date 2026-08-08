@@ -14,6 +14,7 @@ Create a routing record before deep review:
 | `design-native-mobile-interactions` | Native/cross-platform iOS or Android app | Framework, OS range, windows, permissions, lifecycle | Platform-specific behavior and acceptance criteria |
 | `internationalize-interface-experience` | Multiple locales/markets, user-visible strings/data, or RTL/complex scripts | Resources, data formats, layouts, target locales | Localization-readiness and RTL/data requirements |
 | `design-trustworthy-consent-experiences` | Data choice, permissions, tracking, subscription, cancellation, export, deletion, pricing disclosure | Purpose, necessity, lifecycle, alternatives | Fair choice architecture and deceptive-pattern review |
+| `review-behavioral-design` | Product intentionally shapes activation, follow-through, retention, repeated real-world behavior, consequential choices, incentives, or behavior-change outcomes | Critical journeys, target behavior, user-valued outcome, mechanics, evidence, and measurement | Behavioral diagnosis, intervention risks, ethics, and prioritized improvements |
 | `define-product-metrics-experiments` | Success metrics, analytics, A/B tests, causal claims, or optimization roadmap | Decision, hypothesis, events, assignment/results | Metric quality, readiness, validity, interpretation |
 | `build-scale-design-systems` | Repeated patterns, shared libraries/tokens, multiple teams/stacks, governance or adoption | Production examples, packages, docs, ownership | System gaps, API/governance/adoption recommendations |
 | `design-human-ai-interactions` | Product uses generative, predictive, ranking, or agentic AI | AI role, inputs, outputs, actions, risk and evaluation | Capability, uncertainty, control, recovery and launch gates |
@@ -24,6 +25,7 @@ Create a routing record before deep review:
 - Apply the core three to representative critical journeys, then deepen only where screening finds evidence.
 - Respect the declared review depth. For rapid and standard reviews, defer lower-consequence lenses rather than partially loading every specialist.
 - Route cross-domain issues to a lead lens and supporting lenses. Example: a camera permission can lead with mobile mechanics, supported by consent fairness and accessibility.
+- Use `review-behavioral-design` as a routed specialist suite rather than invoking all of its companion skills from this orchestrator. Deduplicate its findings against usability, consent, and experimentation findings by user outcome and root cause.
 - Do not ask `run-lean-usability-tests` to simulate participants or `define-product-metrics-experiments` to invent data.
 - Do not use visual polish to compensate for broken structure, and do not redesign a pattern before understanding its task.
 

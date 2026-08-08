@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Behavior Change"
+  short_description: "Turn outcomes into ethical behavior-change plans"
+  default_prompt: "Use $design-behavior-change to turn this product goal into an ethical, measurable behavior-change plan."

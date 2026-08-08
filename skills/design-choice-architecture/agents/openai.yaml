@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Choice Architecture"
+  short_description: "Structure choices for clarity, agency, and action"
+  default_prompt: "Use $design-choice-architecture to redesign this choice environment for clarity, agency, and better outcomes."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Decision Quality"
+  short_description: "Reduce noise and bias in repeated judgments"
+  default_prompt: "Use $audit-decision-quality to audit this judgment process and recommend decision-hygiene improvements."

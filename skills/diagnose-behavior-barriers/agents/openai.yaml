@@ -1,0 +1,4 @@
+interface:
+  display_name: "Diagnose Behavior Barriers"
+  short_description: "Find why a target behavior is not happening"
+  default_prompt: "Use $diagnose-behavior-barriers to identify and rank the barriers preventing this target behavior."

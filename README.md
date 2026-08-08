@@ -37,6 +37,29 @@ Use this orchestrator when the request concerns an entire product, repository, r
 - [`build-scale-design-systems`](skills/build-scale-design-systems/SKILL.md) — system charter, inventory, pilots, tokens, component APIs, governance, adoption, and value measurement.
 - [`design-human-ai-interactions`](skills/design-human-ai-interactions/SKILL.md) — capability framing, uncertainty, provenance, human control, recovery, risk, and AI launch gates.
 
+## Behavioral design skills
+
+### Start with a behavioral review
+
+- [`review-behavioral-design`](skills/review-behavioral-design/SKILL.md) — audit how a product shapes behavior, route evidence through the relevant behavioral specialists, and return one prioritized improvement backlog.
+
+Use this orchestrator when the request concerns activation, follow-through, retention, repeated behavior, consequential choices, incentives, behavioral ethics, or whether an intervention will work beyond a pilot. It complements `review-product-experience`: the product orchestrator covers the whole UX/UI system, while the behavioral orchestrator goes deeper on why behavior occurs and how an intervention should be validated.
+
+### Diagnose and design behavior
+
+- [`design-behavior-change`](skills/design-behavior-change/SKILL.md) — run an ethical behavior-change project from outcome and COM-B diagnosis through intervention, implementation, and measurement.
+- [`diagnose-behavior-barriers`](skills/diagnose-behavior-barriers/SKILL.md) — find the earliest consequential barrier using behavioral maps, COM-B, CREATE, B=MAP, and falsifiable evidence.
+- [`design-choice-architecture`](skills/design-choice-architecture/SKILL.md) — structure option sets, defaults, order, descriptions, friction, feedback, and choice engines for fluency, accuracy, and agency.
+- [`design-healthy-habit-loop`](skills/design-healthy-habit-loop/SKILL.md) — design beneficial repetition through context, low friction, reward, and recovery without compulsive engagement.
+- [`design-behavioral-incentives`](skills/design-behavioral-incentives/SKILL.md) — align rewards, penalties, pricing, quotas, and performance metrics with the outcome the system claims to value.
+
+### Audit decisions, ethics, evidence, and scale
+
+- [`audit-decision-quality`](skills/audit-decision-quality/SKILL.md) — detect and reduce unwanted noise and bias in repeated human or AI-assisted judgments.
+- [`audit-behavioral-ethics`](skills/audit-behavioral-ethics/SKILL.md) — identify manipulation, sludge, compulsion, incentive conflicts, autonomy loss, and harm.
+- [`design-behavior-experiments`](skills/design-behavior-experiments/SKILL.md) — test behavioral causal chains with user outcomes, mechanism metrics, guardrails, and trustworthy experiment checks.
+- [`assess-intervention-scale`](skills/assess-intervention-scale/SKILL.md) — assess transfer, voltage drops, last-yard delivery, spillovers, cost, and safe rollout.
+
 ## Structure
 
 Each skill contains:
@@ -65,4 +88,7 @@ Check current official standards and platform documentation whenever a skill mar
 
 ## Research basis
 
-The full architecture, book analysis, source boundaries, and design rationale are documented in [`ui-books-skill-architecture.md`](ui-books-skill-architecture.md).
+The architecture, book analysis, source boundaries, and design rationale are documented in:
+
+- [`ui-books-skill-architecture.md`](ui-books-skill-architecture.md) for the UI/UX suite;
+- [`behavioral-design-skill-architecture.md`](behavioral-design-skill-architecture.md) for the behavioral-design suite.

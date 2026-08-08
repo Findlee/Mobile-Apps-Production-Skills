@@ -1,0 +1,4 @@
+interface:
+  display_name: "Assess Intervention Scale"
+  short_description: "Test whether an intervention will transfer and scale"
+  default_prompt: "Use $assess-intervention-scale to assess whether this intervention can transfer to the target context and scale safely."

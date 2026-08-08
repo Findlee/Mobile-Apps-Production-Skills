@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Behavioral Ethics"
+  short_description: "Detect manipulation, dark patterns, and user harm"
+  default_prompt: "Use $audit-behavioral-ethics to review this product mechanic for manipulation, autonomy risks, and user harm."

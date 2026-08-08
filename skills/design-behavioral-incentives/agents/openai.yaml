@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Behavioral Incentives"
+  short_description: "Align rewards, metrics, and intended behavior"
+  default_prompt: "Use $design-behavioral-incentives to design or audit these incentives for signals, trade-offs, and unintended behavior."

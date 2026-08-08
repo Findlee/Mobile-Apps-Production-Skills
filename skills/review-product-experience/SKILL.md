@@ -1,6 +1,6 @@
 ---
 name: review-product-experience
-description: Orchestrate an evidence-based end-to-end review of a digital application or product by routing work through the relevant UX, UI, interaction, accessibility, mobile, localization, privacy, experimentation, design-system, and human-AI skills, then deduplicating findings into one prioritized improvement plan. Use when asked to review an entire app, repository, prototype, release candidate, or product experience; identify what should be improved; run a cross-disciplinary UX audit; assess readiness; or produce a remediation roadmap. Do not use for a narrow single-component question when one specialist skill is sufficient, to fabricate user or production evidence, or to modify the product unless implementation is explicitly requested.
+description: Orchestrate an evidence-based end-to-end review of a digital application or product by routing work through the relevant UX, UI, interaction, accessibility, mobile, localization, privacy, behavioral-design, experimentation, design-system, and human-AI skills, then deduplicating findings into one prioritized improvement plan. Use when asked to review an entire app, repository, prototype, release candidate, or product experience; identify what should be improved; run a cross-disciplinary UX audit; assess readiness; or produce a remediation roadmap. Do not use for a narrow single-component question when one specialist skill is sufficient, to fabricate user or production evidence, or to modify the product unless implementation is explicitly requested.
 ---
 
 # Review Product Experience
@@ -59,7 +59,7 @@ The core pass normally includes:
 - `design-resilient-interactions` for critical states and recovery;
 - `design-inclusive-accessible-experiences` for exclusion and accessibility screening.
 
-Add planning, patterns, visual design, usability testing, mobile, internationalization, consent, metrics/experiments, design systems, or human-AI review only when the product and evidence warrant them.
+Add planning, patterns, visual design, usability testing, mobile, internationalization, consent, behavioral design, metrics/experiments, design systems, or human-AI review only when the product and evidence warrant them.
 
 Within the selected depth budget, prefer specialists most likely to change the decision. Record other applicable lenses as screened, deferred, or unassessed with a reason.
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Healthy Habit Loop"
+  short_description: "Create useful repeat behavior without compulsion"
+  default_prompt: "Use $design-healthy-habit-loop to design a healthy repeat-use loop for this user behavior."

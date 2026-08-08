@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Behavioral Design"
+  short_description: "Audit a product through the full skill suite"
+  default_prompt: "Use $review-behavioral-design to audit this project and return a prioritized behavioral-design improvement plan."

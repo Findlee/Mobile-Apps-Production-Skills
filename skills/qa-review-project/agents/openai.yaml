@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review QA Project"
+  short_description: "Coordinate a full evidence-based QA project review"
+  default_prompt: "Use $qa-review-project to review this project across all relevant QA dimensions and return a prioritized improvement plan."

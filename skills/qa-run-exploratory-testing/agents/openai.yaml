@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run Exploratory Testing"
+  short_description: "Plan and report focused exploratory sessions"
+  default_prompt: "Use $qa-run-exploratory-testing to create and run a focused exploratory testing session."

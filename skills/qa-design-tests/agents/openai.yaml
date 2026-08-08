@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Strong Tests"
+  short_description: "Design risk-based tests beyond the happy path"
+  default_prompt: "Use $qa-design-tests to design a focused, risk-based test set for this change."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test Mobile Apps"
+  short_description: "Design risk-based mobile app test coverage"
+  default_prompt: "Use $qa-test-mobile-app to build a risk-based mobile testing strategy for this app or feature."

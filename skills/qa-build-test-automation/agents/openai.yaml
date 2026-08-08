@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Test Automation"
+  short_description: "Design valuable and maintainable test automation"
+  default_prompt: "Use $qa-build-test-automation to design a maintainable automation strategy for this system."

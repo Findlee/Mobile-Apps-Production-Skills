@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Risk-Based Testing"
+  short_description: "Build a testing strategy around product risk"
+  default_prompt: "Use $qa-plan-risk-based-testing to create a focused test strategy for this feature, project, or release."

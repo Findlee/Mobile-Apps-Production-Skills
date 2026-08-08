@@ -1,0 +1,4 @@
+interface:
+  display_name: "Investigate Defects"
+  short_description: "Turn failures into evidence-backed defect reports"
+  default_prompt: "Use $qa-investigate-defect to investigate this failure and produce an evidence-backed defect report."

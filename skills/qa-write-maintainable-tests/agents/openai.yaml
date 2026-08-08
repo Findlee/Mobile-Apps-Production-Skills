@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Maintainable Tests"
+  short_description: "Write clear, stable, maintainable automated tests"
+  default_prompt: "Use $qa-write-maintainable-tests to write or improve trustworthy and maintainable tests for this change."

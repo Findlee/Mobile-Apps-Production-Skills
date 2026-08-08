@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test Web APIs"
+  short_description: "Build a holistic risk-based API test strategy"
+  default_prompt: "Use $qa-test-web-api to design a holistic, risk-based test strategy for this web API."

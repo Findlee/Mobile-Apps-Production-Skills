@@ -1,0 +1,4 @@
+interface:
+  display_name: "Improve Testability"
+  short_description: "Improve system controllability and observability"
+  default_prompt: "Use $qa-improve-testability to review this code or architecture for testability improvements."

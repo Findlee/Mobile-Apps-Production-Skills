@@ -46,6 +46,7 @@ The suite-wide orchestration contract, ownership boundaries, Evidence Model, and
 | What is wrong with the UX/UI experience and critical journeys? | [`review-product-experience`](skills/review-product-experience/SKILL.md) |
 | Why is behavior occurring, and is the intervention effective and ethical? | [`review-behavioral-design`](skills/review-behavioral-design/SKILL.md) |
 | What is wrong with Flutter/React Native engineering health or release readiness? | [`review-mobile-application`](skills/review-mobile-application/SKILL.md) |
+| Where is QA evidence weak across requirements, risks, tests, automation, defects, and production readiness? | [`qa-review-project`](skills/qa-review-project/SKILL.md) |
 
 Only one reviewer owns orchestration, final synthesis, and priority at a time. A parent may request a bounded pass from another review suite; that child returns scoped findings and does not produce a competing final backlog.
 
@@ -130,6 +131,41 @@ Use this orchestrator for application health, technical debt, modernization, or 
 - [`diagnose-mobile-performance`](skills/diagnose-mobile-performance/SKILL.md) — investigate jank, startup, input, memory, CPU, or battery symptoms through measurements and controlled experiments.
 - [`integrate-native-capability`](skills/integrate-native-capability/SKILL.md) — integrate permissions, device capabilities, plugins, and custom native APIs through typed, lifecycle-safe boundaries.
 - [`prepare-mobile-release`](skills/prepare-mobile-release/SKILL.md) — prepare signed Android and iOS candidates, migrations, staged rollout, monitoring, and recovery.
+
+## QA and software testing skills
+
+### Start with a full QA audit
+
+- [`qa-review-project`](skills/qa-review-project/SKILL.md) — inspect a whole application, repository, or service across all relevant QA lenses and return one evidence-based prioritized improvement plan.
+
+Use this orchestrator when the primary question is whether the project has enough trustworthy quality evidence and what should be improved across requirements, risk, test design, platform coverage, testability, automation, defects, and production operation. It reviews all eleven specialist lenses for applicability, deepens only the relevant ones, and remains read-only unless implementation is requested separately.
+
+Use `review-mobile-application` when the primary question is Flutter or React Native engineering health. Use `review-product-experience` for UX/UI quality and `product-review` for product and business performance. Only one reviewer should own final synthesis and priority; another review suite may return a bounded pass.
+
+### Requirements, risk, and test design
+
+- [`qa-clarify-requirements`](skills/qa-clarify-requirements/SKILL.md) — turn ambiguous requirements into behavioral models, concrete examples, decisions, and testable acceptance criteria.
+- [`qa-plan-risk-based-testing`](skills/qa-plan-risk-based-testing/SKILL.md) — map product and project risks to proportionate evidence, feedback timing, omissions, and residual-risk reporting.
+- [`qa-design-tests`](skills/qa-design-tests/SKILL.md) — derive focused tests using boundaries, partitions, decisions, states, sequences, properties, structural gaps, and explicit oracles.
+- [`qa-run-exploratory-testing`](skills/qa-run-exploratory-testing/SKILL.md) — plan, execute when a target is available, and report focused exploratory sessions without treating a checklist as exploration.
+
+### Mobile and API testing
+
+- [`qa-test-mobile-app`](skills/qa-test-mobile-app/SKILL.md) — design mobile QA coverage across devices, lifecycle, interruptions, networks, permissions, accessibility, security, performance, and release evidence.
+- [`qa-test-web-api`](skills/qa-test-web-api/SKILL.md) — review and test HTTP APIs across contracts, workflows, authorization, resilience, performance, security, and operations.
+
+### Testability, automation, and test code
+
+- [`qa-improve-testability`](skills/qa-improve-testability/SKILL.md) — improve controllability, observability, isolation, deterministic execution, and diagnostic power without insecure test backdoors.
+- [`qa-build-test-automation`](skills/qa-build-test-automation/SKILL.md) — decide what to automate and design suite scopes, data, dependencies, CI feedback, failure evidence, ownership, and maintenance policy.
+- [`qa-write-maintainable-tests`](skills/qa-write-maintainable-tests/SKILL.md) — write, review, repair, and refactor trustworthy test code, fixtures, assertions, doubles, isolation, and diagnostics.
+
+`design-valuable-tests` remains the compact software-engineering entry point for choosing a valuable automated-test portfolio. Use `qa-design-tests` when systematic test-case derivation is the main task, and `qa-build-test-automation` when suite architecture and delivery feedback are the main task.
+
+### Defects and production operation
+
+- [`qa-investigate-defect`](skills/qa-investigate-defect/SKILL.md) — preserve failure evidence, minimize reproduction, test competing hypotheses, and produce a defensible defect report.
+- [`qa-assess-production-readiness`](skills/qa-assess-production-readiness/SKILL.md) — assess failure chains, bounded work, capacity, recovery, observability, rollout safeguards, and residual operational risk.
 
 ## Structure
 

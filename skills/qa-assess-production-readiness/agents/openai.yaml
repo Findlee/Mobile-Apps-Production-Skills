@@ -1,0 +1,4 @@
+interface:
+  display_name: "Assess Production Readiness"
+  short_description: "Assess resilience, operations, and release safety"
+  default_prompt: "Use $qa-assess-production-readiness to assess this system or release for safe production operation."

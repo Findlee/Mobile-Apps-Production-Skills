@@ -1,0 +1,4 @@
+interface:
+  display_name: "Clarify QA Requirements"
+  short_description: "Turn ambiguous requirements into testable behavior"
+  default_prompt: "Use $qa-clarify-requirements to clarify this feature and expose risks, examples, and open questions."

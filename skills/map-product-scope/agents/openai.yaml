@@ -1,0 +1,4 @@
+interface:
+  display_name: "Map Product Scope"
+  short_description: "Map outcomes, journeys, MVPs, and releases"
+  default_prompt: "Use $map-product-scope to turn this product idea into a story map and coherent release slices."

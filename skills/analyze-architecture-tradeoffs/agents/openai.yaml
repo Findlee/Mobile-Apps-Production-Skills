@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Architecture Tradeoffs"
+  short_description: "Compare architecture choices through tradeoffs"
+  default_prompt: "Use $analyze-architecture-tradeoffs to compare viable architecture options for this system and recommend one."

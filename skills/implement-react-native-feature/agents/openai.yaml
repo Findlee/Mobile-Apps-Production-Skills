@@ -1,0 +1,4 @@
+interface:
+  display_name: "Implement React Native Feature"
+  short_description: "Implement reliable React Native features"
+  default_prompt: "Use $implement-react-native-feature to implement this React Native feature as a verified vertical slice."

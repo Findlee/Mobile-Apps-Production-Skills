@@ -1,0 +1,4 @@
+interface:
+  display_name: "Integrate Native Capability"
+  short_description: "Integrate native device capabilities safely"
+  default_prompt: "Use $integrate-native-capability to design and verify this Flutter or React Native platform integration."

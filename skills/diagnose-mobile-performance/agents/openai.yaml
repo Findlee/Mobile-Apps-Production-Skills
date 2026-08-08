@@ -1,0 +1,4 @@
+interface:
+  display_name: "Diagnose Mobile Performance"
+  short_description: "Measure and fix mobile performance problems"
+  default_prompt: "Use $diagnose-mobile-performance to measure, isolate, and fix this mobile performance problem."

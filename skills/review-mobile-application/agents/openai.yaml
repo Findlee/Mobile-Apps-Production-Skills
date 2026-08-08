@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Mobile Application"
+  short_description: "Audit mobile apps and prioritize improvements"
+  default_prompt: "Use $review-mobile-application to audit this Flutter or React Native project and return an evidence-based improvement roadmap."

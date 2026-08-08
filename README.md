@@ -1,6 +1,6 @@
 # AI Skills
 
-Reusable AI-agent skills for designing, building, reviewing, and validating digital product experiences.
+Reusable AI-agent skills for designing, building, reviewing, and validating digital products and software.
 
 The skills are organized around repeatable tasks rather than individual books. Their core instructions are tool- and framework-neutral, so the underlying workflows can be adapted for Codex, Claude Code, and other agents that support skill-style context packages.
 
@@ -60,6 +60,32 @@ Use this orchestrator when the request concerns activation, follow-through, rete
 - [`design-behavior-experiments`](skills/design-behavior-experiments/SKILL.md) — test behavioral causal chains with user outcomes, mechanism metrics, guardrails, and trustworthy experiment checks.
 - [`assess-intervention-scale`](skills/assess-intervention-scale/SKILL.md) — assess transfer, voltage drops, last-yard delivery, spillovers, cost, and safe rollout.
 
+## Software and mobile development skills
+
+### Start with an engineering review
+
+- [`review-mobile-application`](skills/review-mobile-application/SKILL.md) — audit an existing Flutter or React Native application, route repository evidence through the relevant engineering specialists, and return one prioritized remediation roadmap.
+
+Use this orchestrator for application health, technical debt, modernization, or release-readiness reviews. It is read-only by default and complements `review-product-experience`: the product orchestrator evaluates the experience, while the mobile orchestrator evaluates implementation, architecture, data, testing, performance evidence, native boundaries, and delivery controls.
+
+### Plan and shape software changes
+
+- [`plan-feature-change`](skills/plan-feature-change/SKILL.md) — turn a feature or behavior change into safe vertical increments, tests, rollout, and completion criteria.
+- [`map-product-scope`](skills/map-product-scope/SKILL.md) — organize ideas and flat backlogs around users, journeys, learning slices, and coherent releases.
+- [`analyze-architecture-tradeoffs`](skills/analyze-architecture-tradeoffs/SKILL.md) — compare system architectures through quality scenarios, constraints, operating cost, and explicit trade-offs.
+- [`design-module-boundaries`](skills/design-module-boundaries/SKILL.md) — define enforceable source-code boundaries, public surfaces, and dependency direction.
+- [`design-valuable-tests`](skills/design-valuable-tests/SKILL.md) — build a risk-based test portfolio with appropriate test levels and doubles.
+- [`refactor-safely`](skills/refactor-safely/SKILL.md) — improve code structure through behavior-preserving, verified increments and clear stop criteria.
+
+### Build and operate mobile applications
+
+- [`implement-flutter-feature`](skills/implement-flutter-feature/SKILL.md) — deliver Flutter features across widgets, state, navigation, data, async behavior, and tests without imposing a new state library.
+- [`implement-react-native-feature`](skills/implement-react-native-feature/SKILL.md) — deliver typed React Native features across React state, effects, navigation, lists, native lifecycle, and tests.
+- [`design-mobile-sync`](skills/design-mobile-sync/SKILL.md) — design explicit offline behavior, durable operations, idempotency, conflict handling, and recovery.
+- [`diagnose-mobile-performance`](skills/diagnose-mobile-performance/SKILL.md) — investigate jank, startup, input, memory, CPU, or battery symptoms through measurements and controlled experiments.
+- [`integrate-native-capability`](skills/integrate-native-capability/SKILL.md) — integrate permissions, device capabilities, plugins, and custom native APIs through typed, lifecycle-safe boundaries.
+- [`prepare-mobile-release`](skills/prepare-mobile-release/SKILL.md) — prepare signed Android and iOS candidates, migrations, staged rollout, monitoring, and recovery.
+
 ## Structure
 
 Each skill contains:
@@ -69,8 +95,10 @@ skill-name/
 ├── SKILL.md
 ├── agents/
 │   └── openai.yaml
-└── references/
-    └── focused guidance loaded when needed
+├── references/
+│   └── focused guidance loaded when needed
+└── assets/                 # optional
+    └── reusable output templates
 ```
 
 `SKILL.md` defines when the skill should activate, its workflow, safety boundaries, and default output. Detailed knowledge is split into focused reference files to avoid loading an entire knowledge base for every request.
@@ -91,4 +119,5 @@ Check current official standards and platform documentation whenever a skill mar
 The architecture, book analysis, source boundaries, and design rationale are documented in:
 
 - [`ui-books-skill-architecture.md`](ui-books-skill-architecture.md) for the UI/UX suite;
-- [`behavioral-design-skill-architecture.md`](behavioral-design-skill-architecture.md) for the behavioral-design suite.
+- [`behavioral-design-skill-architecture.md`](behavioral-design-skill-architecture.md) for the behavioral-design suite;
+- [`mobile-development-skill-architecture.md`](mobile-development-skill-architecture.md) for the software and mobile-development suite.

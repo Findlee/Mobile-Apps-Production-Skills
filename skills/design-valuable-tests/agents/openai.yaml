@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Valuable Tests"
+  short_description: "Build high-value, maintainable test strategies"
+  default_prompt: "Use $design-valuable-tests to design a risk-based test strategy for this behavior."

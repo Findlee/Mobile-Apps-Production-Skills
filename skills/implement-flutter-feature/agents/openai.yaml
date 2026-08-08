@@ -1,0 +1,4 @@
+interface:
+  display_name: "Implement Flutter Feature"
+  short_description: "Implement reliable Flutter features end to end"
+  default_prompt: "Use $implement-flutter-feature to implement this Flutter feature as a verified vertical slice."

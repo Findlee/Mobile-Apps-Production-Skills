@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Mobile Sync"
+  short_description: "Design resilient offline-first mobile sync"
+  default_prompt: "Use $design-mobile-sync to design the offline behavior and synchronization protocol for this mobile feature."

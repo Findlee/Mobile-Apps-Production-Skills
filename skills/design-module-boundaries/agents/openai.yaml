@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Module Boundaries"
+  short_description: "Design enforceable modules and dependencies"
+  default_prompt: "Use $design-module-boundaries to assess this codebase and propose simpler, enforceable module boundaries."

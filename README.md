@@ -6,6 +6,12 @@ The skills are organized around repeatable tasks rather than individual books. T
 
 ## UI/UX skills
 
+### Start with an end-to-end review
+
+- [`review-product-experience`](skills/review-product-experience/SKILL.md) — inspect a whole application, route evidence through the relevant specialist skills, deduplicate findings, and return one prioritized remediation roadmap.
+
+Use this orchestrator when the request concerns an entire product, repository, release candidate, or multiple journeys. Use one of the specialist skills below for a narrow question.
+
 ### Product and interaction foundations
 
 - [`plan-interface-experience`](skills/plan-interface-experience/SKILL.md) — turn a product idea into user activities, flows, information architecture, screens, states, and validation questions.
@@ -51,8 +57,8 @@ skill-name/
 Copy a skill directory into the location expected by your agent, or keep it inside a project for inspection and explicit invocation. For Codex-compatible invocation, use the skill name shown in its `agents/openai.yaml`, for example:
 
 ```text
-Use $design-human-ai-interactions to define the human review,
-confirmation, uncertainty, and recovery behavior for this AI feature.
+Use $review-product-experience to review this application end to end
+and produce a prioritized improvement plan.
 ```
 
 Check current official standards and platform documentation whenever a skill marks guidance as version-sensitive. The skills do not replace legal review, accessibility certification, security review, qualified statistics, or research with real participants.

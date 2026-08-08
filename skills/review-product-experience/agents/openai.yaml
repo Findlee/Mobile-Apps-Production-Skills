@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Experience Review"
+  short_description: "Run a routed end-to-end product experience review"
+  default_prompt: "Use $review-product-experience to review this application end to end and produce a prioritized improvement plan."

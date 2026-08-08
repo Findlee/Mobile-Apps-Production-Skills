@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scalable Design Systems"
+  short_description: "Build and evolve connected design systems at scale"
+  default_prompt: "Use $build-scale-design-systems to plan or improve a scalable design system for this organization."

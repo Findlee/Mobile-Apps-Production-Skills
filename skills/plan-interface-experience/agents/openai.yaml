@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interface Experience Planning"
+  short_description: "Turn product ideas into complete user flows"
+  default_prompt: "Use $plan-interface-experience to turn this product idea into a user-centered flow and screen model."

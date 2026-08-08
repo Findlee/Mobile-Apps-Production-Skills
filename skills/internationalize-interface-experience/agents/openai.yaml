@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interface Internationalization"
+  short_description: "Prepare interfaces for localization, locales, and RTL"
+  default_prompt: "Use $internationalize-interface-experience to make this interface localization-ready across languages and writing directions."

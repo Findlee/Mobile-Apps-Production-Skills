@@ -1,0 +1,4 @@
+interface:
+  display_name: "Trustworthy Consent Design"
+  short_description: "Design clear privacy choices without coercion"
+  default_prompt: "Use $design-trustworthy-consent-experiences to create clear, fair privacy and consent choices for this flow."

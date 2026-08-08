@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual UI Craft"
+  short_description: "Refine hierarchy, typography, color, and layout"
+  default_prompt: "Use $craft-visual-ui to turn this interface into a clear, coherent, polished visual system."

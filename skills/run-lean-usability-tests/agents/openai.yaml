@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lean Usability Testing"
+  short_description: "Plan, run, and synthesize lightweight user tests"
+  default_prompt: "Use $run-lean-usability-tests to prepare a practical usability study and convert observations into fixes."

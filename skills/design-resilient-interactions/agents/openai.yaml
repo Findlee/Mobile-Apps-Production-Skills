@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resilient Interactions"
+  short_description: "Design robust states, errors, and recovery paths"
+  default_prompt: "Use $design-resilient-interactions to design complete states, failure handling, and recovery for this flow."

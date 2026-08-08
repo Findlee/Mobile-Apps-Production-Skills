@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interface Usability Audit"
+  short_description: "Find and prioritize actionable UI and UX issues"
+  default_prompt: "Use $audit-interface-usability to audit this interface and prioritize evidence-based fixes."

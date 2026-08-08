@@ -1,0 +1,4 @@
+interface:
+  display_name: "Human-AI Interaction Design"
+  short_description: "Design transparent and controllable AI experiences"
+  default_prompt: "Use $design-human-ai-interactions to design a transparent, controllable, and resilient AI-powered experience."

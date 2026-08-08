@@ -1,0 +1,4 @@
+interface:
+  display_name: "Inclusive & Accessible Design"
+  short_description: "Design inclusive, accessible digital experiences"
+  default_prompt: "Use $design-inclusive-accessible-experiences to design and verify an inclusive, accessible experience for this product."

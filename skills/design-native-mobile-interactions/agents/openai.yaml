@@ -1,0 +1,4 @@
+interface:
+  display_name: "Native Mobile Interactions"
+  short_description: "Apply current iOS and Android interaction guidance"
+  default_prompt: "Use $design-native-mobile-interactions to define platform-appropriate mobile behavior for this feature."

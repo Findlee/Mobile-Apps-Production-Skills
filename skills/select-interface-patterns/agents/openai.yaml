@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interface Pattern Selection"
+  short_description: "Choose UI patterns through explicit tradeoffs"
+  default_prompt: "Use $select-interface-patterns to compare suitable UI patterns and recommend one for this task."

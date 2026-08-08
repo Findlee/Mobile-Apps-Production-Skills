@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Metrics & Experiments"
+  short_description: "Define metrics and trustworthy product experiments"
+  default_prompt: "Use $define-product-metrics-experiments to define decision metrics and a trustworthy experiment for this product question."

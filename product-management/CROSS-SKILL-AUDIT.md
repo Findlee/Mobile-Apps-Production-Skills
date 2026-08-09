@@ -1,4 +1,4 @@
-# Cross-Skill Audit - v1.1
+# Cross-Skill Audit - v1.2
 
 ## Scope
 
@@ -37,6 +37,27 @@ Fix:
 - added lazy-loading policy;
 - parent orchestrators call specialists one at a time with bounded questions;
 - shared product/evidence state is reused instead of reconstructed.
+
+### P1 - Competing full-audit entry points - FIXED
+
+The portable product-design package proposed `review-product-design` as a second comprehensive review orchestrator. Its final triggers, ownership, synthesis, and backlog overlapped with `product-review`, while a narrow UX/UI review already belongs to `review-product-experience`.
+
+Fix:
+
+- retained `product-review` as the only full product/business audit orchestrator;
+- added `product design review` intent to its trigger description;
+- transferred the portable skill's shared case brief, authority, coverage, fallback, localization, and numeric-provenance behavior;
+- did not add or alias a second skill folder with overlapping triggers.
+
+### P1 - Product-review primary context size - FIXED
+
+The complete audit playbook lived in a 1,326-line `SKILL.md`, increasing context cost for every review even when most modes and dimensions were irrelevant.
+
+Fix:
+
+- reduced the primary skill to the core ownership, evidence, workflow, and completion contract;
+- moved review modes, artifact inspection, health dimensions, specialist routing, finding calibration, and output schemas into directly linked references;
+- preserved lightweight scan coverage while loading specialist and domain depth only when material.
 
 ### P1 - Scope/spec ownership ambiguity - FIXED
 
@@ -141,7 +162,7 @@ These overlaps are guardrails, not competing ownership.
 
 ## Release recommendation
 
-The system is coherent enough to treat this package as `v1.1` of the Product Management Skills architecture.
+The system is coherent enough to treat this package as `v1.2` of the Product Management Skills architecture.
 
 ## Repository integration audit
 

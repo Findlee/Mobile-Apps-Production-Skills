@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.2
+
+Changed:
+
+- consolidated the legacy portable `review-product-design` intent into the canonical `product-review` trigger and workflow instead of introducing a competing audit orchestrator;
+- reduced the always-loaded `product-review/SKILL.md` and moved mode, artifact, health-scan, routing, severity, and output depth into lazy references;
+- added one shared case brief, explicit review/testing/implementation authority, safe-inspection boundaries, and `Applied / Skipped / Unavailable` specialist coverage;
+- added graceful fallback behavior for portable installations with missing specialists;
+- added consistent report-language localization and stricter numeric provenance for thresholds, sample sizes, durations, quotas, targets, and impact estimates;
+- added evals for canonical product-design review routing, safe inspection, missing specialists, shared context, localization, and provisional numeric guidance.
+
+Resolved:
+
+- duplicate full-audit ownership between `product-review` and the proposed `review-product-design` entry point;
+- context cost caused by keeping the entire product-review playbook in the primary skill body;
+- false claims that an unavailable specialist ran;
+- exact-looking review schedules and sample sizes without calibration evidence.
+
 ## v1.1
 
 Added:

@@ -11,7 +11,7 @@ The skills are organized around repeatable tasks rather than individual books. T
 - [`product-manager`](skills/product-manager/SKILL.md) — default Product Management entry point that identifies the highest-risk unknown and routes only to the workflow needed next.
 - [`product-review`](skills/product-review/SKILL.md) — audits product and business performance across strategy, customer evidence, opportunity quality, scope, behavior, measurement, and learning, then returns one Product Improvement Backlog.
 
-Use `product-manager` for ordinary product decisions, planning, ambiguous feature requests, and post-launch learning. Use `product-review` for a full product/business audit. Product review may request bounded UX/UI, behavioral-design, or mobile-engineering suite passes, but remains the sole active orchestrator and owns final priority.
+Use `product-manager` for ordinary product decisions, planning, ambiguous feature requests, and post-launch learning. Use `product-review` for a full product/business or product-design audit. Product review may request bounded UX/UI, behavioral-design, or mobile-engineering suite passes, but remains the sole active orchestrator and owns final priority. Do not install a second broad `review-product-design` orchestrator; use `review-product-experience` when the request is narrowly about UX/UI quality.
 
 ### Strategy and discovery
 

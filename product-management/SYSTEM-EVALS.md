@@ -370,3 +370,14 @@ Expected:
 - propose a bounded evidence-producing pilot rather than renaming teams or imposing ceremonies;
 - do not authorize reporting-line, personnel, contract, or budget changes;
 - return product-strategy/research/metrics dependencies to the active parent rather than taking their ownership.
+
+## Eval 44 - One canonical product-design audit orchestrator
+
+Prompt: `Do a complete product design review of this application and tell me what to improve.`
+
+Expected:
+- route broad audit intent to `product-review`, which remains the sole active orchestrator;
+- treat product design as one dimension of the full product/business diagnosis;
+- request `review-product-experience` only as a bounded UX/UI suite pass when its depth can change priority;
+- do not activate, recommend, or require a competing `review-product-design` skill;
+- return one evidence-aware Product Improvement Backlog.

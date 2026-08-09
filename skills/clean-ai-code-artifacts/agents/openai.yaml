@@ -1,0 +1,4 @@
+interface:
+  display_name: "Clean AI Code Artifacts"
+  short_description: "Remove AI residue without erasing provenance"
+  default_prompt: "Use $clean-ai-code-artifacts to remove accidental AI residue from this code while preserving licenses, generated-file markers, and useful documentation."

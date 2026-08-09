@@ -122,6 +122,7 @@ Use this orchestrator for application health, technical debt, modernization, or 
 - [`design-module-boundaries`](skills/design-module-boundaries/SKILL.md) — define enforceable source-code boundaries, public surfaces, and dependency direction.
 - [`design-valuable-tests`](skills/design-valuable-tests/SKILL.md) — build a risk-based test portfolio with appropriate test levels and doubles.
 - [`refactor-safely`](skills/refactor-safely/SKILL.md) — improve code structure through behavior-preserving, verified increments and clear stop criteria.
+- [`clean-ai-code-artifacts`](skills/clean-ai-code-artifacts/SKILL.md) — remove accidental assistant prose, tutorial narration, debug residue, and obsolete generated scaffolding while preserving behavior, licenses, generated-file markers, useful rationale, and required provenance.
 
 ### Build and operate mobile applications
 
@@ -194,6 +195,16 @@ and produce a prioritized improvement plan.
 ```
 
 Check current official standards and platform documentation whenever a skill marks guidance as version-sensitive. The skills do not replace legal review, accessibility certification, security review, qualified statistics, or research with real participants.
+
+## Claude Code agents
+
+The optional [`integrations/claude/`](integrations/claude/README.md) adapter packages three Claude Code subagents around the portable skill library:
+
+- `feature-tester` independently tests each non-trivial feature and returns evidence-backed defects without editing product code;
+- `e2e-test-runner` executes authorized critical journeys against a runnable environment and returns `PASS`, `FAIL`, or `BLOCKED` with artifacts and residual risk;
+- `code-simplifier` makes bounded, behavior-preserving simplifications and applies `clean-ai-code-artifacts` to the current change.
+
+The accompanying [`feature-quality-gate`](integrations/claude/workflows/feature-quality-gate.md) keeps the main session as the sole coordinator and routes specialists by change risk. Copy the agent definitions into a target project's `.claude/agents/` directory and install their referenced skills under `.claude/skills/`.
 
 ## Research basis
 

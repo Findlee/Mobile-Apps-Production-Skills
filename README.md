@@ -47,6 +47,8 @@ The suite-wide orchestration contract, ownership boundaries, Evidence Model, and
 | Why is behavior occurring, and is the intervention effective and ethical? | [`review-behavioral-design`](skills/review-behavioral-design/SKILL.md) |
 | What is wrong with Flutter/React Native engineering health or release readiness? | [`review-mobile-application`](skills/review-mobile-application/SKILL.md) |
 | Where is QA evidence weak across requirements, risks, tests, automation, defects, and production readiness? | [`qa-review-project`](skills/qa-review-project/SKILL.md) |
+| Which mobile threats and security controls are unsupported or vulnerable? | [`review-mobile-security`](skills/review-mobile-security/SKILL.md) |
+| Do the release behavior and declarations match current App Store or Google Play requirements? | [`review-mobile-store-compliance`](skills/review-mobile-store-compliance/SKILL.md) |
 
 Only one reviewer owns orchestration, final synthesis, and priority at a time. A parent may request a bounded pass from another review suite; that child returns scoped findings and does not produce a competing final backlog.
 
@@ -133,6 +135,13 @@ Use this orchestrator for application health, technical debt, modernization, or 
 - [`integrate-native-capability`](skills/integrate-native-capability/SKILL.md) — integrate permissions, device capabilities, plugins, and custom native APIs through typed, lifecycle-safe boundaries.
 - [`prepare-mobile-release`](skills/prepare-mobile-release/SKILL.md) — prepare signed Android and iOS candidates, migrations, staged rollout, monitoring, and recovery.
 
+### Review mobile security and store compliance
+
+- [`review-mobile-security`](skills/review-mobile-security/SKILL.md) — review threats, security controls, mobile-facing APIs, and authorized evidence using current OWASP and platform guidance.
+- [`review-mobile-store-compliance`](skills/review-mobile-store-compliance/SKILL.md) — compare candidate behavior, privacy declarations, manifests, permissions, SDKs, metadata, and account or purchase flows with current Apple and Google requirements.
+
+Use the security reviewer for exploitability and protection mechanisms. Use the store-compliance reviewer for policy applicability and declaration consistency. Use `prepare-mobile-release` for build, signing, rollout, monitoring, and recovery operations.
+
 ## QA and software testing skills
 
 ### Start with a full QA audit
@@ -198,13 +207,19 @@ Check current official standards and platform documentation whenever a skill mar
 
 ## Claude Code agents
 
-The optional [`integrations/claude/`](integrations/claude/README.md) adapter packages three Claude Code subagents around the portable skill library:
+The optional [`integrations/claude/`](integrations/claude/README.md) adapter packages nine Claude Code subagents around the portable skill library:
 
 - `feature-tester` independently tests each non-trivial feature and returns evidence-backed defects without editing product code;
 - `e2e-test-runner` executes authorized critical journeys against a runnable environment and returns `PASS`, `FAIL`, or `BLOCKED` with artifacts and residual risk;
 - `code-simplifier` makes bounded, behavior-preserving simplifications and applies `clean-ai-code-artifacts` to the current change.
+- `mobile-reviewer` owns mobile-engineering health without repeating feature or E2E verification;
+- `experience-reviewer` owns UX/UI, accessibility, and interaction resilience;
+- `qa-reviewer` owns the quality-evidence system and consumes test-runner reports;
+- `security-reviewer` owns threats, security controls, and security-specific tests;
+- `store-compliance-reviewer` owns current store rules and declaration-to-behavior consistency;
+- `product-auditor` owns product value, scope, measurement, and learning evidence.
 
-The accompanying [`feature-quality-gate`](integrations/claude/workflows/feature-quality-gate.md) keeps the main session as the sole coordinator and routes specialists by change risk. Copy the agent definitions into a target project's `.claude/agents/` directory and install their referenced skills under `.claude/skills/`.
+The accompanying [`feature-quality-gate`](integrations/claude/workflows/feature-quality-gate.md) routes delivery checks. The [`specialist review and release gate`](integrations/claude/workflows/review-and-release-gate.md) assigns one owner per review question, requires specialists to reuse evidence, and keeps the main session as the sole coordinator. Copy the selected agent definitions into a target project's `.claude/agents/` directory and install their referenced skills under `.claude/skills/`.
 
 ## Research basis
 

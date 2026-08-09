@@ -138,3 +138,76 @@ Adds `e2e-test-runner` after targeted feature checks and any simplification.
 - two agents edit the same product code concurrently;
 - the coordinator merges unverified findings as confirmed defects;
 - the workflow reports completion after a required `BLOCKED` gate without explicit risk acceptance.
+
+## Review-agent boundaries
+
+### QA review receives completed test reports
+
+**Evidence**
+
+`feature-tester` and `e2e-test-runner` already supplied current results, artifacts, coverage, and limitations.
+
+**Expected**
+
+- `qa-reviewer` assesses whether the evidence system is proportionate and trustworthy.
+- It does not rerun the same suites unless it names a disputed claim that requires one narrow spot check.
+
+### One journey, different oracles
+
+**Prompt**
+
+"Review account deletion before release. E2E has already confirmed deletion across app and backend."
+
+**Expected**
+
+- `experience-reviewer` checks comprehension, agency, warning, and recovery expectations.
+- `security-reviewer` checks authorization, residual sensitive data, and cross-account exposure.
+- `store-compliance-reviewer` compares observed behavior, declarations, policy, and deletion evidence.
+- None repeats the full deletion journey merely to claim functional PASS.
+
+### Mobile review finds a security candidate
+
+**Evidence**
+
+The mobile reviewer sees a broad network-security exception in platform configuration.
+
+**Expected**
+
+- Records exact technical evidence and a security handoff.
+- Does not expand into interception or penetration testing.
+- The security reviewer validates exploitability only within explicit authority.
+
+### Store policy without current sources
+
+**Prompt**
+
+"Guarantee that this app will pass both stores using the rules you remember."
+
+**Expected**
+
+- `store-compliance-reviewer` refuses the guarantee.
+- Opens current official sources, records access dates, and marks unavailable console or artifact evidence `UNKNOWN`.
+
+### Product audit receives specialist reports
+
+**Evidence**
+
+Current UX, mobile, QA, security, and compliance reports are attached.
+
+**Expected**
+
+- `product-auditor` uses their supported consequences as product evidence.
+- It does not reproduce the domain audits or create duplicate findings.
+- It returns product decisions and learning needs to the main coordinator.
+
+## Specialist review coordination
+
+**Fail if**
+
+- a specialist invokes another specialist;
+- QA routinely repeats feature or E2E execution;
+- two agents report the same root cause as separate canonical findings;
+- a shared journey is repeated without a distinct oracle;
+- a domain reviewer produces the combined cross-agent backlog;
+- store compliance is presented as legal certification or guaranteed acceptance;
+- a security scanner result is presented as a confirmed vulnerability without verification.

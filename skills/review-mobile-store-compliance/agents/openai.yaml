@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Mobile Store Compliance"
+  short_description: "Review App Store and Google Play readiness"
+  default_prompt: "Use $review-mobile-store-compliance to review this mobile release against current App Store and Google Play requirements."

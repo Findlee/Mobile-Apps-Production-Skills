@@ -2,6 +2,8 @@
 
 Use this workflow after implementing a non-trivial feature or behavior change. Keep the main Claude session as the sole coordinator. The three specialists return bounded results and do not call one another.
 
+For periodic product, engineering, UX, QA, security, or store reviews, use [review-and-release-gate.md](review-and-release-gate.md). Those reviewers consume this gate's evidence and do not repeat it by default.
+
 ## Route by risk
 
 | Situation | Required specialist |

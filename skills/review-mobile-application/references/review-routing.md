@@ -28,6 +28,12 @@ For a general application review, apply these lenses at minimum:
 
 Add all other lenses only when their activation evidence exists. If a required skill is unavailable, name the missing lens in limitations and perform only the analysis supported by the current skill and repository evidence.
 
+## Boundaries with dedicated reviewers
+
+- If the primary question is threat exposure, exploitability, authentication or authorization security, secure storage, cryptography, or network security, route it to `review-mobile-security`. This review may record the technical evidence and consequence, but does not perform a competing security assessment.
+- If the primary question is App Store or Google Play policy, privacy declarations, manifests, Data safety, metadata, or submission evidence, route it to `review-mobile-store-compliance`. `prepare-mobile-release` continues to own build provenance, signing, compatibility, rollout, monitoring, and recovery.
+- Reuse current feature, E2E, UX, QA, security, and compliance reports. Repeat a check only to resolve a narrowly stated engineering hypothesis.
+
 ## Conflict resolution
 
 When specialist recommendations conflict:

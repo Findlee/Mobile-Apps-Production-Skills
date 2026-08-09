@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Mobile Security"
+  short_description: "Review mobile security with verified evidence"
+  default_prompt: "Use $review-mobile-security to perform an evidence-based, read-only security review of this mobile app."

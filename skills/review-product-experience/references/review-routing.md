@@ -30,6 +30,7 @@ Create a routing record before deep review:
 - Use `review-behavioral-design` as a routed specialist suite rather than invoking all of its companion skills from this orchestrator. Deduplicate its findings against usability, consent, and experimentation findings by user outcome and root cause.
 - Do not ask `run-lean-usability-tests` to simulate participants or `define-product-metrics-experiments` to invent data.
 - Do not use visual polish to compensate for broken structure, and do not redesign a pattern before understanding its task.
+- Keep consent comprehension, user agency, and deceptive-pattern risk in this review. Route vulnerability assessment to `review-mobile-security` and store declaration or policy accuracy to `review-mobile-store-compliance`; reuse their evidence instead of duplicating findings.
 
 ## Routing output
 

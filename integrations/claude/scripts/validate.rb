@@ -75,7 +75,18 @@ rescue StandardError => e
 end
 
 agent_files = repo_root.glob("integrations/claude/agents/*.md").sort
-errors << "expected three Claude agent files, found #{agent_files.length}" unless agent_files.length == 3
+expected_agent_names = %w[
+  code-simplifier
+  e2e-test-runner
+  experience-reviewer
+  feature-tester
+  mobile-reviewer
+  product-auditor
+  qa-reviewer
+  security-reviewer
+  store-compliance-reviewer
+]
+errors << "expected #{expected_agent_names.length} Claude agent files, found #{agent_files.length}" unless agent_files.length == expected_agent_names.length
 
 names = []
 agent_files.each do |path|
@@ -98,7 +109,8 @@ agent_files.each do |path|
       end
     end
 
-    if %w[e2e-test-runner feature-tester].include?(name)
+    read_only_agents = expected_agent_names - ["code-simplifier"]
+    if read_only_agents.include?(name)
       denied = list(metadata["disallowedTools"])
       %w[Write Edit Agent].each do |tool|
         errors << "#{path.basename}: read-only agent must deny #{tool}" unless denied.include?(tool)
@@ -118,10 +130,16 @@ agent_files.each do |path|
 end
 
 errors << "Claude agent names are not unique" unless names.uniq.length == names.length
+missing_agents = expected_agent_names - names
+unexpected_agents = names - expected_agent_names
+errors << "missing Claude agents: #{missing_agents.join(', ')}" unless missing_agents.empty?
+errors << "unexpected Claude agents: #{unexpected_agents.join(', ')}" unless unexpected_agents.empty?
 
 markdown_files = [repo_root.join("README.md")]
 markdown_files.concat(repo_root.glob("integrations/claude/**/*.md"))
 markdown_files.concat(repo_root.glob("skills/clean-ai-code-artifacts/**/*.md"))
+markdown_files.concat(repo_root.glob("skills/review-mobile-security/**/*.md"))
+markdown_files.concat(repo_root.glob("skills/review-mobile-store-compliance/**/*.md"))
 
 markdown_files.uniq.each do |path|
   text = path.read
